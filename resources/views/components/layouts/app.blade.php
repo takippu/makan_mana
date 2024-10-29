@@ -10,15 +10,20 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB8bmYj1yV_19ZEIY1amyzxbBM9S61h7A&libraries=places"></script>
         <style>
             #map {
-                height: 100vh;
-                width: 100%;
+                height: 70vh;
+                width: 50%;
             }
         </style>
+            @livewireStyles
+
     </head>
     <body>
         @include('livewire.nav.topNav')
         {{ $slot }}
         @include('livewire.nav.bottomNav')
+
+        @livewireScripts
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Optional for HTTP requests -->
 
     </body>
 </html>
